@@ -1,95 +1,91 @@
+/* 1. General Page Setup */
 body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f7f9; /* Light grey background */
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: #e5e7eb;
+  padding: 0;
+  color: #333;
 }
 
-.header {
+/* 2. Header Section */
+header {
+  background-color: #0078d4; /* Professional Blue */
+  color: white;
   text-align: center;
-  padding: 40px 20px;
-  background: #020617;
+  padding: 50px 20px;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* 3. Main Content Area */
+main {
+  max-width: 1000px;
+  margin: 20px auto;
   padding: 20px;
 }
 
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* 4. The Project Grid (Flexbox) */
+.project-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Makes it look good on mobile */
+}
+
+/* 5. The "Cards" - Designing them to look representable */
 .card {
   background: white;
-  color: #020617;
-  padding: 30px;
-  border-radius: 16px;
-  text-align: center;
-  margin-bottom: 40px;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-top: 5px solid #0078d4; /* Blue top border */
+  transition: transform 0.3s ease;
 }
 
-.card img {
-  border-radius: 50%;
-  margin-bottom: 15px;
+.card:hover {
+  transform: translateY(-5px); /* Moves up slightly when you point at it */
 }
 
-button {
-  background: #2563eb;
+.card h3 {
+  color: #0078d4;
+  margin-top: 0;
+}
+
+/* 6. Tags (Skills) */
+.tags {
+  margin: 15px 0;
+}
+
+.tags span {
+  background: #e1ecf4;
+  color: #39739d;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 15px;
+  margin-right: 5px;
+}
+
+/* 7. Buttons */
+.btn {
+  background-color: #0078d4;
   color: white;
   border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
 }
 
-button:hover {
-  background: #1e40af;
-}
-
-.projects {
-  margin-bottom: 40px;
-}
-
-.project {
-  background: #020617;
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 15px;
-}
-
-.footer {
-  text-align: center;
-  padding: 20px;
-  background: #020617;
-  font-size: 14px;
-}
-@media (max-width: 600px) {
-  .container {
-    padding: 10px;
-  }
-
-  .card {
-    padding: 20px;
-  }
-
-  .projects {
-    text-align: center;
-  }
-}
-.card,
-.project {
-  animation: fadeIn 0.8s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.project:hover {
-  transform: scale(1.03);
-  transition: 0.3s ease;
+.btn:hover {
+  background-color: #005a9e; /* Darker blue when clicking */
 }
